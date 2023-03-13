@@ -11,13 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks extends DriverInt{
-//      System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
-//    driver = new ChromeDriver();
-//    wait = new WebDriverWait(driver, 10);
-//        driver.get("https://bookcart.azurewebsites.net/");
-//    WebDriver.Options manage = driver.manage();
-//        manage.timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-//        manage.window().maximize();
     @Before
     public void beforeScenario() {
         System.setProperty("webdriver.chrom.driver", "/usr/local/bin/chromedriver");
@@ -32,7 +25,6 @@ public class Hooks extends DriverInt{
     @After
     public void afterScenario(Scenario scenario) {
         boolean failed = scenario.isFailed();
-        System.out.println("is Failed? "+ failed);
         if(failed) {
             byte[] screenshotAs = driver.getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshotAs, "image/png");
