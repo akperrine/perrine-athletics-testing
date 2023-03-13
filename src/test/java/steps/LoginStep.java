@@ -11,24 +11,24 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class LoginStep extends DriverInt {
 
     @Given("user enters a password as {string}")
-    public void user_enters_a_password_as(String password) {
+    public void userEntersAPasswordAs(String password) {
         driver.findElement(By.xpath("//input[@placeholder='Enter Password']")).sendKeys(password);
     }
 
     @When("user clicks the login button")
-    public void user_clicks_the_login_button() {
+    public void userClicksTheLoginButton() {
         driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
 
     @Then("Login should be successful")
-    public void login_should_be_successful() {
+    public void loginShouldBeSuccessful() {
         WebElement welcomeElement = driver.findElement(By.xpath("//h2[@class='welcome-header']"));
         String text = wait.until(ExpectedConditions.visibilityOf(welcomeElement)).getText();
         System.out.println(text);
     }
 
     @Then("Login should be unsuccessful")
-    public void login_should_be_unsuccessful() {
+    public void loginShouldBeUnsuccessful() {
         WebElement welcomeElement = driver.findElement(By.xpath("//img[@alt='logo']"));
         wait.until(ExpectedConditions.visibilityOf(welcomeElement)).getText();
     }

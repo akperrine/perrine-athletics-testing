@@ -1,7 +1,15 @@
+@workout
 Feature: User updates their workouts
 
-  Scenario: User can update a workout button
-    Given user clicks the complete button
-    And complete button says Mark As Complete or Complete
-    When user clicks the complete button
-    Then complete button should say the opposite of its original statement
+  Background:
+    Given user logs in as "123123"
+    And navigates to Week View
+
+  Scenario Outline: User can update a workout button
+    When user clicks the button with text as "<buttonText>"
+    Then complete button should say "<updatedText>"
+
+    Examples:
+      |buttonText|updatedText|
+      |Mark as Complete|Completed|
+      |Completed        |Mark as Complete|
