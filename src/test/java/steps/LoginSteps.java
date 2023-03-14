@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class LoginStep extends DriverInt {
+public class LoginSteps extends DriverInt {
 
     @Given("user enters a password as {string}")
     public void userEntersAPasswordAs(String password) {

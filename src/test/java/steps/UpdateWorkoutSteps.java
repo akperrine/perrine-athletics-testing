@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-public class UpdateWorkout extends DriverInt {
+public class UpdateWorkoutSteps extends DriverInt {
 
 
     @Given("user logs in as {string}")

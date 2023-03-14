@@ -1,6 +1,5 @@
 package testRunner;
 
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
@@ -10,8 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
         dryRun = !true,
         glue = {"steps", "hooks"},
         snippets = SnippetType.CAMELCASE,
-        tags = "@workout"
-
+        tags = "@goals"
 )
 public class Runner extends AbstractTestNGCucumberTests {
 }

@@ -1,3 +1,4 @@
+@login
 Feature: User login Validation
 
   Scenario: Login should be successful
